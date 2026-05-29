@@ -1,9 +1,13 @@
 import React from 'react'
+import Image from '../Components/Agancy/Image'
+import Section1 from '../Components/Agancy/section1'
 
 const Agency = () => {
   return (
     <div>
-      Agency
+      <Image />
+      <Section1 />
+      <div className='section-2 h-screen w-screen'></div>
     </div>
   )
 }

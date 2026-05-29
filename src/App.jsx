@@ -7,7 +7,7 @@ import Video from '/Sigma Web Development/Projects/Project 4 - K72/src/assets/Vi
 
 const App = () => {
   return (
-    <div className='bg-[#111] text-white selection:bg-[#50fdcf] selection:text-[#111]'>
+    <div className='text-white selection:bg-[#50fdcf] selection:text-[#111]'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Agency' element={<Agency />} />

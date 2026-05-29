@@ -4,7 +4,7 @@ import Section1 from '../Components/Agancy/section1'
 
 const Agency = () => {
   return (
-    <div>
+    <div className='text-black'>
       <Image />
       <Section1 />
       <div className='section-2 h-screen w-screen'></div>

@@ -8,7 +8,8 @@
     font-family: Lausanne500;
     src: url(/Fonts/Lausanne-500.woff2);
 }
-
+html, 
 body {
-    background-color: #111;
+    overflow-x: hidden;
+    background-color: #D4FFF3;
 }

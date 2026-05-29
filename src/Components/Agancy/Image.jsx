@@ -1,29 +1,57 @@
 import {useGSAP} from '@gsap/react'
 import gsap from 'gsap'
 import React, { useRef } from 'react'
-import ImageCarl from '../../assets/Image/Carl_480x640.jpg'
 import { ScrollTrigger } from 'gsap/all'
+import Carl from '../../assets/Images/Carl_480x640.jpg'
+import Olivier from '../../assets/Images/Olivier_480x640.jpg'
+import ChantalG from '../../assets/Images/ChantalG_480x640.jpg'
+import Michele from '../../assets/Images/Michele_480X640.jpg'
+import MEL from '../../assets/Images/MEL_480X640.jpg'
+import CAMILLE from '../../assets/Images/CAMILLE_480X640_2.jpg'
+import MEGGIE from '../../assets/Images/MEGGIE_480X640_2.jpg'
+import Joel from '../../assets/Images/joel_480X640_3.jpg'
 
 const Image = () => {
     const ImageDivRef = useRef(null)
+    const ImageRef = useRef(null)
+    const ImageArray = [
+        Carl,
+        Olivier,
+        ChantalG,
+        Michele,
+        MEL,
+        CAMILLE,
+        MEGGIE,
+        Joel
+    ]
+
     gsap.registerPlugin(ScrollTrigger)
 
     useGSAP(function(){
         gsap.to(ImageDivRef.current,{
             scrollTrigger:{
                 trigger:ImageDivRef.current,
-                markers:true,
                 start:'top 26%',
-                end:'top -115%',
+                end:'top -100%',
                 scrub:true,
-                pin:true
+                pin:true,
+                onUpdate:(elem)=>{
+                    let ImageIDX;
+                    if(elem.progress<1){
+                        ImageIDX = Math.floor(elem.progress * ImageArray.length)
+                    }else {
+                        ImageIDX = ImageArray.length - 1
+                    }
+                    ImageRef.current.src = ImageArray[ImageIDX]
+                    
+                }
             }
         })
     })
   return (
     <div>
-      <div ref={ImageDivRef}  className='absolute h-[20vw] w-[15vw] top-[13vw] left-[26vw] select-none'>
-        <img className='rounded-2xl h-full w-full object-cover' src={ImageCarl} alt="" />
+      <div ref={ImageDivRef}  className='absolute h-[20vw] w-[15vw] top-1/2 left-1/4 select-none'>
+        <img ref={ImageRef} className='rounded-2xl h-full w-full object-cover' src={Carl} alt="" />
       </div>
     </div>
   )

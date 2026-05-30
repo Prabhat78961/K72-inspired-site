@@ -7,13 +7,13 @@ import Video from '/Sigma Web Development/Projects/Project 4 - K72/src/assets/Vi
 
 const App = () => {
   return (
-    <div className='text-white selection:bg-[#50fdcf] selection:text-[#111]'>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/Agency' element={<Agency />} />
-        <Route path='/Projects' element={<Projects />} />
-      </Routes>
-    </div>
+      <div className='text-white selection:bg-[#50fdcf] selection:text-[#111]'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Agency' element={<Agency />} />
+          <Route path='/Projects' element={<Projects />} />
+        </Routes>
+      </div>
   )
 }
 

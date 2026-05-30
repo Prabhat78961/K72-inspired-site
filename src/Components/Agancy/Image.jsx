@@ -32,9 +32,12 @@ const Image = () => {
             scrollTrigger:{
                 trigger:ImageDivRef.current,
                 start:'top 26%',
-                end:'top -100%',
-                scrub:true,
+                end:'top -115%',
                 pin:true,
+                pinSpacing:true,
+                pinReparent:true,
+                pinType:'transform',
+                scrub:1,
                 onUpdate:(elem)=>{
                     let ImageIDX;
                     if(elem.progress<1){
@@ -50,7 +53,7 @@ const Image = () => {
     })
   return (
     <div>
-      <div ref={ImageDivRef}  className='absolute h-[20vw] w-[15vw] top-1/2 left-1/4 select-none'>
+      <div ref={ImageDivRef}  className='absolute h-[20vw] w-[15vw] top-[12vw] left-[27vw] select-none'>
         <img ref={ImageRef} className='rounded-2xl h-full w-full object-cover' src={Carl} alt="" />
       </div>
     </div>

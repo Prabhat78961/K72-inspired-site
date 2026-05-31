@@ -37,7 +37,7 @@ npm install
 ### Development
 
 ```bash
-npm run dev
+npm run build
 
 ```
 

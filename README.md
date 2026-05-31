@@ -29,7 +29,7 @@ Built to experiment with advanced GSAP timelines and seamless page transitions w
 
 ```bash
 git clone https://github.com/Prabhat78961/K72-inspired-site
-cd k72-clone
+cd K72-inspired-site
 npm install
 
 ```

@@ -1,16 +1,53 @@
-# React + Vite
+# K72 Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend clone of k72.ca focusing on replicating its complex layout animations and interaction design. The core layout and motion mechanics remain identical to the original site, but with a modified color palette and custom theme configuration.
 
-Currently, two official plugins are available:
+Built to experiment with advanced GSAP timelines and seamless page transitions within a React environment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+* React.js
+* React Router DOM
+* GSAP (with ScrollTrigger)
+* TailwindCSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Core Features & Engineering Focus
 
-## Expanding the ESLint configuration
+### GSAP Animation & React Lifecycle
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Trigger Cleanups:** Animation instances are carefully scoped inside React hooks, ensuring proper garbage collection and ScrollTrigger destruction on unmount to prevent memory leaks or layout clipping.
+* **Performance Optimization:** Interactions rely on hardware-accelerated properties (transform, opacity) to maintain smooth performance during heavy scrolling sequences and pinning states.
+
+### Routing & Custom Theming
+
+* **Route Transitions:** Integrated GSAP with React Router DOM to manage entrance and exit states, delaying the unmounting phase so page transitions fully complete.
+* **Design System Setup:** Remapped the original design tokens inside `tailwind.config.js` to swap the color scheme and typography while maintaining the exact spatial constraints of the source site.
+
+## Getting Started
+
+### Installation
+
+```bash
+git clone https://github.com/yourusername/k72-clone.git
+cd k72-clone
+npm install
+
+```
+
+### Development
+
+```bash
+npm run dev
+
+```
+
+### Build
+
+```bash
+npm run build
+
+```
+
+## Credits
+
+Original design and interaction concepts belong to K72. This repository is strictly for educational purposes and frontend practice.

@@ -28,7 +28,7 @@ Built to experiment with advanced GSAP timelines and seamless page transitions w
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/k72-clone.git
+git clone https://github.com/yourusername/k72-clone.git](https://github.com/Prabhat78961/K72-inspired-site
 cd k72-clone
 npm install
 

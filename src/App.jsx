@@ -10,13 +10,13 @@ import Fullscreen from './Components/Navigations/Fullscreen'
 const App = () => {
   return (
       <div className='text-white selection:bg-[#50fdcf] selection:text-[#111] relative'>
-        {/* <Navbar />
+        <Navbar />
+        <Fullscreen />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Agency' element={<Agency />} />
           <Route path='/Projects' element={<Projects />} />
-        </Routes> */}
-        <Fullscreen />
+        </Routes>
       </div>
   )
 }

@@ -8,7 +8,33 @@
     font-family: Lausanne500;
     src: url(/Fonts/Lausanne-500.woff2);
 }
-html, 
+
+.moveX {
+    animation-name: moveAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.moveLink {
+    opacity: 0;
+    transition: all ease 0.3;
+}
+
+.link:hover .moveLink {
+    opacity: 1;
+}
+
+@keyframes moveAnimation {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+html,
 body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }

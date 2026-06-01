@@ -28,8 +28,8 @@ Built to experiment with advanced GSAP timelines and seamless page transitions w
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/k72-clone.git
-cd k72-clone
+git clone https://github.com/Prabhat78961/K72-inspired-site
+cd K72-inspired-site
 npm install
 
 ```
@@ -37,7 +37,7 @@ npm install
 ### Development
 
 ```bash
-npm run dev
+npm run build
 
 ```
 

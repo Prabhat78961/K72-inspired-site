@@ -88,8 +88,8 @@ const Fullscreen = () => {
       </div>
 
       <div ref={FullNav} className="relative text-white h-full overflow-y-auto">
-        <div className="flex w-full justify-between items-start p-2">
-          <div className="w-[10vw]">
+        <div className="flex w-full justify-between items-start p-2 z-50">
+          <div onClick={() => setnavOpen(false)} className="w-[10vw]">
             <Link to={'/'}><svg
               className="w-full"
               xmlns="http://www.w3.org/2000/svg"
@@ -113,14 +113,14 @@ const Fullscreen = () => {
         </div>
 
         <div className="py-2">
-          <div className="link origin-top border-t hover:cursor-pointer relative overflow-hidden">
+          <Link to={'/projects'}><div onClick={() => setnavOpen(false)} className="link origin-top border-t hover:cursor-pointer relative overflow-hidden">
             <h1 className="font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-4 uppercase">
               Work
             </h1>
             <div className="moveLink absolute flex h-[15vw] top-[-4vw] text-black transition-all">
               <div className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/projects'}>See Everything</Link>
+                  See Everything
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -128,7 +128,7 @@ const Fullscreen = () => {
                   alt=""
                 />
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/projects'}>See Everything</Link>
+                  See Everything
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -136,9 +136,9 @@ const Fullscreen = () => {
                   alt=""
                 />
               </div>
-              <div className="moveX flex items-center bg-[#50fdcf]">
+              <div onClick={() => setnavOpen(false)} className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/projects'}>See Everything</Link>
+                  See Everything
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -146,7 +146,7 @@ const Fullscreen = () => {
                   alt=""
                 />
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/projects'}>See Everything</Link>
+                  See Everything
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -155,16 +155,16 @@ const Fullscreen = () => {
                 />
               </div>
             </div>
-          </div>
+          </div></Link>
 
-          <div className="link border-t relative overflow-hidden cursor-pointer">
+          <Link to={'/agency'}><div onClick={() => setnavOpen(false)} className="link border-t relative overflow-hidden cursor-pointer">
             <h1 className="font-[Lausanne500] leading-[0.8] text-[8vw] text-center pt-4 uppercase">
               Agency
             </h1>
             <div className="moveLink absolute flex h-[15vw] top-[-4vw] text-black transition-all">
               <div className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/agency'}>Know us</Link>
+                  Know us
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -172,7 +172,7 @@ const Fullscreen = () => {
                   alt=""
                 />
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/agency'}>Know us</Link>
+                  Know us
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -180,9 +180,9 @@ const Fullscreen = () => {
                   alt=""
                 />
               </div>
-              <div className="moveX flex items-center bg-[#50fdcf]">
+              <div onClick={() => setnavOpen(false)} className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/agency'}>Know us</Link>
+                  Know us
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -190,7 +190,7 @@ const Fullscreen = () => {
                   alt=""
                 />
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/agency'}>Know us</Link>
+                  Know us
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -199,40 +199,40 @@ const Fullscreen = () => {
                 />
               </div>
             </div>
-          </div>
+          </div></Link>
 
-          <div className="link border-t relative overflow-hidden cursor-pointer">
+          <Link to={'/Contact'}><div className="link border-t relative overflow-hidden cursor-pointer">
             <h1 className="font-[Lausanne500] leading-[0.8] text-[8vw] text-center pt-4 uppercase">
               Contact
             </h1>
             <div className="moveLink absolute flex h-[15vw] top-[-4vw] text-black transition-all">
               <div className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Contact'}>Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}</Link>
+                  Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}
                 </h2>
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Contact'}>Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}</Link>
+                  Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}
                 </h2>
               </div>
               <div className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Contact'}>Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}</Link>
+                  Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}
                 </h2>
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Contact'}>Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}</Link>
+                  Send us a fax&nbsp;&nbsp;&nbsp;&nbsp;{" "}
                 </h2>
               </div>
             </div>
-          </div>
+          </div></Link>
 
-          <div className="link border-y relative overflow-hidden cursor-pointer">
+          <Link to={'/Blog'}><div className="link border-y relative overflow-hidden cursor-pointer">
             <h1 className="font-[Lausanne500] leading-[0.8] text-[8vw] text-center pt-4 uppercase">
               Blog
             </h1>
             <div className="moveLink absolute flex h-[15vw] top-[-4vw] text-black transition-all">
               <div className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Blog'}>See Everything{" "}</Link>
+                  See Everything{" "}
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -240,7 +240,7 @@ const Fullscreen = () => {
                   alt=""
                 />
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Blog'}>See Everything{" "}</Link>
+                  See Everything{" "}
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -250,7 +250,7 @@ const Fullscreen = () => {
               </div>
               <div className="moveX flex items-center bg-[#50fdcf]">
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Blog'}>See Everything{" "}</Link>
+                  See Everything{" "}
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -258,7 +258,7 @@ const Fullscreen = () => {
                   alt=""
                 />
                 <h2 className="whitespace-nowrap font-[Lausanne500] text-[8vw] text-center leading-[0.8] pt-6 uppercase">
-                  <Link to={'/Blog'}>See Everything{" "}</Link>
+                  See Everything{" "}
                 </h2>
                 <img
                   className="h-[7vw] shrink-0 rounded-full w-[16vw] object-cover pt-2"
@@ -267,7 +267,7 @@ const Fullscreen = () => {
                 />
               </div>
             </div>
-          </div>
+          </div></Link>
         </div>
       </div>
     </div>
